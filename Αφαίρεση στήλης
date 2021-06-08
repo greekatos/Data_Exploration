@@ -19,7 +19,7 @@ replace_Residence_type = {'Residence_type':{'Urban':0, 'Rural':1}}
 replace_smoking_status = {'smoking_status':{'formerly smoked':0, 'never smoked':1, 'smokes':2, 'Unknown':3}}
 
 
-data[data.isnull().any(axis=1)]#cleanup null values
+#data[data.isnull().any(axis=1)]cleanup null values
 
 data = data.replace(replace_gender)
 data = data.replace(replace_ever_married)
@@ -27,7 +27,7 @@ data = data.replace(replace_work_type)
 data = data.replace(replace_Residence_type)
 data = data.replace(replace_smoking_status)
 
-data['bmi'].fillna((data['bmi'].mean()), inplace=True)
+#data['bmi'].fillna((data['bmi'].mean()), inplace=True)
 
 data.pop('id')
 data.pop('smoking_status')
